@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request
-import sqlite3
+import sqlite3, gunicorn
 
 currentId = 0
 tasks = []
@@ -62,6 +62,3 @@ def postdelete():
 
     return redirect('/')
 
-
-if __name__ == '__main__':
-    app.run()
